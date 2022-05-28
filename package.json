@@ -2,15 +2,24 @@
   "name": "@lab11/anchorgen",
   "version": "1.0.0-alpha.1",
   "description": "Anchor generator from IDLs",
+  "author": "labeleven.dev",
+  "homepage": "https://github.com/labeleven-dev/anchorgen#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/labeleven-dev/anchorgen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/labeleven-dev/anchorgen/issues"
+  },
+  "license": "MIT",
+  "keywords": ["solana", "anchor", "rust"],
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "main": "./build/src/index.js",
   "bin": {
     "anchorgen": "./build/src/index.js"
   },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "author": "labeleven.dev",
-  "license": "MIT",
   "scripts": {
     "test": "ts-mocha test/**/*.test.ts --exit",
     "lint": "gts lint",
