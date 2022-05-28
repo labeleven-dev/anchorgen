@@ -1,0 +1,178 @@
+{
+  "version": "0.1.0",
+  "name": "my_program",
+  "instructions": [
+    {
+      "name": "doSomething",
+      "accounts": [
+        {
+          "name": "anAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "aMutableAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "mutableSigner",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "compositeAccount",
+          "accounts": [
+            {
+              "name": "anotherAccount",
+              "isMut": false,
+              "isSigner": false
+            },
+            {
+              "name": "anotherCompositeAccount",
+              "accounts": [
+                {
+                  "name": "yetAnotherAccount",
+                  "isMut": true,
+                  "isSigner": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "primitive",
+          "type": "u64"
+        },
+        {
+          "name": "defined",
+          "type": {
+            "defined": "SomeStruct"
+          }
+        },
+        {
+          "name": "option",
+          "type": {
+            "option": "u64"
+          }
+        },
+        {
+          "name": "coption",
+          "type": {
+            "coption": "u64"
+          }
+        },
+        {
+          "name": "bytes",
+          "type": "bytes"
+        },
+        {
+          "name": "string",
+          "type": "string"
+        },
+        {
+          "name": "publicKey",
+          "type": "publicKey"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "AccountStruct",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "someKey",
+            "type": "publicKey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "SomeStruct",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "tokens",
+            "type": "u64"
+          },
+          {
+            "name": "decimals",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SomeEnum",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "NoField"
+          },
+          {
+            "name": "OneNameField",
+            "fields": [
+              {
+                "name": "x",
+                "type": "u8"
+              }
+            ]
+          },
+          {
+            "name": "TwoNameField",
+            "fields": [
+              {
+                "name": "x",
+                "type": "u8"
+              },
+              {
+                "name": "y",
+                "type": "u16"
+              }
+            ]
+          },
+          {
+            "name": "OneTuple",
+            "fields": ["u8"]
+          },
+          {
+            "name": "TwoTuple",
+            "fields": ["u8", "i16"]
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "name": "OhDearGodStopIt"
+    },
+    {
+      "name": "SomethingGoneMildlyWrong",
+      "msg": "Something has gone midly wrong!"
+    },
+    {
+      "code": 666,
+      "name": "SomethingGoneHorriblyWrong",
+      "msg": "Something has gone horribly wrong!"
+    }
+  ]
+}
