@@ -33,7 +33,7 @@
     "fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
-    "version": "semantic-release"
+    "release": "semantic-release"
   },
   "dependencies": {
     "@project-serum/anchor": "^0.24.2",

@@ -18,7 +18,7 @@ jobs:
       - run: npm test
       - run: npm run lint
       # version & publish
-      - run: npm run version
+      - run: npm run release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
