@@ -1,0 +1,24 @@
+name: Publish package
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      # setup
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16.x (LTS)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      # test
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      # version & publish
+      - run: npm run version
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

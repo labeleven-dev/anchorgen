@@ -1,0 +1,19 @@
+name: Pull Request Build
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # setup
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16.x (LTS)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      # test
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
