@@ -15,8 +15,8 @@ jobs:
           node-version: 16.x
       # test
       - run: npm ci
-      - run: npm run build
       - run: npm test
+      - run: npm run lint
       # version & publish
       - run: npm run version
         env:
