@@ -1,6 +1,8 @@
 ANCHORGEN
 ===
 
+[![Publish Status](https://github.com/labeleven-dev/anchorgen/actions/workflows/publish.yml/badge.svg)](https://github.com/labeleven-dev/anchorgen/actions/workflows/publish.yml) [![npm version](https://badge.fury.io/js/@lab11%2Fanchorgen.svg)](https://www.npmjs.com/package/@lab11/anchorgen) [![Known Vulnerabilities](https://snyk.io/test/github/labeleven-dev/anchorgen/badge.svg)](https://snyk.io/test/github/labeleven-dev/anchorgen) [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
+
 > This is a work-in-progress. Use at your own risk.
 
 Reverse engineers an Anchor program's interface from its IDL.
@@ -40,13 +42,13 @@ Tested with Anchor 0.24.x.
 - [x] Types: Struct
 - [x] Types: Enum
 - [x] Types: Option & COption
+- [ ] Types: Vectors
 - [x] Errors
 - [ ] Constants
 - [ ] State
 - [ ] Events
 - [ ] Metadata
 - [ ] Docs
-- [ ] Vectors
 
 Contributing
 ---
