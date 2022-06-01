@@ -54,7 +54,10 @@ export async function generate(
 (async () => {
   // setup cli
   const argv = await yargs(hideBin(process.argv))
-    .usage('npx @lab11/anchorgen <Program ID>')
+    .usage(
+      '$0 <Program ID>',
+      'Reads an Anchor IDL from stdin and prints the equivalent Rust interface to stdout'
+    )
     .demandCommand(1)
     .positional('Program ID', {
       describe: 'ID of the generated Anchor program',
