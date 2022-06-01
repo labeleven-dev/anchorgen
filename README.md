@@ -26,25 +26,27 @@ Now you can use reference it in your program's `Cargo.toml` as a depedency:
 jupiter = { path = "../../../jupiter/programs/jupiter", features = ["cpi", "no-entrypoint"] }
 ```
 
+See `npx @lab11/anchorgen --help` for more info.
+
 Features
 ---
 
 Tested with Anchor 0.24.x.
 
-[x] Instrcutions
-[x] Accounts
-[ ] Accounts: Nested
-[x] Types: Primitives
-[x] Types: Struct
-[x] Types: Enum
-[x] Types: Option & COption
-[x] Errors
-[ ] Constants
-[ ] State
-[ ] Events
-[ ] Metadata
-[ ] Docs
-[ ] Vectors
+- [x] Instrcutions
+- [x] Accounts
+- [ ] Accounts: Nested
+- [x] Types: Primitives
+- [x] Types: Struct
+- [x] Types: Enum
+- [x] Types: Option & COption
+- [x] Errors
+- [ ] Constants
+- [ ] State
+- [ ] Events
+- [ ] Metadata
+- [ ] Docs
+- [ ] Vectors
 
 Contributing
 ---
