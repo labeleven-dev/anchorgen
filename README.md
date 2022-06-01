@@ -42,13 +42,13 @@ Tested with Anchor 0.24.x.
 - [x] Types: Struct
 - [x] Types: Enum
 - [x] Types: Option & COption
-- [ ] Types: Vectors
+- [x] Types: Vector & Array
 - [x] Errors
 - [ ] Constants
 - [ ] State
 - [ ] Events
 - [ ] Metadata
-- [ ] Docs
+- [ ] Docs (waiting for <https://github.com/project-serum/anchor/pull/1561> to make it to a canonical release)
 
 Contributing
 ---

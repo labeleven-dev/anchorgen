@@ -55,7 +55,7 @@ export async function generate(
   // setup cli
   const argv = await yargs(hideBin(process.argv))
     .usage(
-      '$0 <Program ID>',
+      '$0 <Program ID> [options]',
       'Reads an Anchor IDL from stdin and prints the equivalent Rust interface to stdout'
     )
     .demandCommand(1)
@@ -70,7 +70,7 @@ export async function generate(
 
   // generate code
   const output = await generate(await readStream(process.stdin), {
-    programId: argv._[0] as string,
+    programId: argv['ProgramID'] as string,
     templatePath: argv.template,
   });
 

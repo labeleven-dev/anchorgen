@@ -80,6 +80,18 @@
         {
           "name": "publicKey",
           "type": "publicKey"
+        },
+        {
+          "name": "vec",
+          "type": {
+            "vec": "u8"
+          }
+        },
+        {
+          "name": "array",
+          "type": {
+            "array": ["bytes", 20]
+          }
         }
       ]
     }

@@ -68,8 +68,8 @@ const mapType = (type: IdlType): string => {
   if (isDefined(type)) return type.defined;
   if (isOption(type)) return `Option<${mapType(type.option)}>`;
   if (isCOption(type)) return `COption<${mapType(type.coption)}>`;
-  // TODO Vec
-  // TODO [;]
+  if (isVec(type)) return `Vec<${mapType(type.vec)}>`;
+  if (isArray(type)) return `[${type.array[0]}; ${type.array[1]}]`;
 
   if (type === 'bytes') return 'Vec<u8>';
   if (type === 'string') return '&str'; // TODO how about "String"
